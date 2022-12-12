@@ -1,0 +1,39 @@
+jwt:
+  secret: user123
+  get:
+    token:
+        uri: /authenticate
+server:
+  port: 8080
+eureka:
+  instance:
+   hostname: localhost
+spring:
+  application:
+    name: api-gateway
+
+  cloud:
+   gateway:
+      routes:
+      - id: flight-customer-registration
+        uri: lb://flight-customer-registration
+        predicates:
+        - Path=/flightcustomer/**
+      - id: flight-booking
+        uri: lb://flight-booking
+        predicates:
+        - Path=/flightbooking/**
+      - id: flight-checkin
+        uri: lb://flight-checkin
+        predicates:
+        - Path=/flightcheckin/**
+      - id: flight-fare
+        uri: lb://flight-fare
+        predicates:
+        - Path=/flightfare/**
+      - id: flight-search
+        uri: lb://flight-search
+        predicates:
+        - Path=/flightsearch/**      
+  main:
+    allow-bean-definition-overriding: true
