@@ -1,0 +1,8 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: flight-customer-registration 
+eureka:
+  instance:
+    hostname: localhost

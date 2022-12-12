@@ -1,0 +1,8 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: flight-search
+eureka:
+  instance:
+    hostname: localhost

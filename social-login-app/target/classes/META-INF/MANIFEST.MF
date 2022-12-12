@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: yogegh
+Build-Jdk: 17.0.3
+Implementation-Title: social-login-app
+Implementation-Version: 1.0
+Implementation-Vendor-Id: com.talk2amareswaran.projects
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/social-login-app
+Created-By: Maven Integration for Eclipse
+
